@@ -1,6 +1,6 @@
 {
-    "name": "SLSignPageData",
-    "version": "1.0",
+    "name": "slsignpagedata",
+    "version": "1.0.1",
     "author": "Nathan Friedly - http://sociablelabs.com",
     "description": "Utility to sign page data (RondavuData) for use with Sociable Labs's widgets",
     "main": "./SLSignPageData.js",

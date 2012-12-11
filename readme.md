@@ -13,7 +13,7 @@ Installation
 Usage
 -----
 
-    var SLSignPageData = require('SLSignPageData');
+    var SLSignPageData = require('slsignpagedata');
 
     var RondavuData = {config:{version:"1.2"}, page: .....
 

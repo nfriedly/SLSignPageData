@@ -1,0 +1,16 @@
+{
+    "name": "SLSignPageData",
+    "version": "1.0",
+    "author": "Nathan Friedly - http://sociablelabs.com",
+    "description": "Utility to sign page data (RondavuData) for use with Sociable Labs's widgets",
+    "main": "./SLSignPageData.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nfriedly/SLSignPageData.git"
+    },
+    "engines": {
+        "node": ">= 0.8.0"
+
+    },
+    "license": "MIT"
+}

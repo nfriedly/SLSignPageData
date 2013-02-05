@@ -32,13 +32,14 @@ API
 **signPageData(RondavuData, [privateKey=null, [fieldsToSign=['page','user','primary_mo','mos']]])**
 
 Modifies and returns the signed RondavuData object with the keys specified by `fieldsToSign`
-converted to Base64 and a `signature` field added and populated. If no privateKey is given, 
+converted to Base64 and a `signature` field added and populated. If no `privateKey` is given, 
 the global one supplied to `setPrivateKey()` will be used.
 
 **setPrivateKey(privateKey)**
 
 Accepts a string `privateKey` - this should be the contents of the `sign_private_key` supplied
-by Sociable Labs.
+by Sociable Labs. This becomes the default private key used by the other methods unless you 
+supply one.
 
 **signField(base64Data, [privateKey=null])**
 

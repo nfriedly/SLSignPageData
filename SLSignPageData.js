@@ -21,13 +21,22 @@ function signPageData(pageData, privateKey, fieldsToSign) {
     return pageData;
 }
 
+var globalPrivateKey = null;
+function setPrivateKey(key) {
+	globalPrivateKey = key;
+}
+
 /**
  * Accepts a base-64 encoded string and a private key, and returns the signature of the string.
  * @param {String} base64Data
  * @param {String} privateKey
- * @return {*}
+ * @return {String}
  */
 function signField(base64Data, privateKey) {
+	privateKey = privateKey || globalPrivateKey;
+	if(!privateKey) {
+		throw "Private Key required";
+	}
     var signer = crypto.createSign('RSA-SHA1'); // Sociable Labs also supports HMAC-SHA256
     signer.update(base64Data);
     return signer.sign(privateKey, 'base64');
@@ -38,3 +47,5 @@ module.exports = signPageData;
 module.exports.signPageData = signPageData;
 
 module.exports.signField = signField;
+
+module.exports.setPrivateKey = setPrivateKey;
